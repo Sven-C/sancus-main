@@ -14,6 +14,7 @@ WORKDIR sancus
 
 # Build and install latest Sancus toolchain
 RUN git clone https://github.com/Sven-C/sancus-main.git .
+RUN git checkout travis-ci
 RUN make install clean \
 	SANCUS_SECURITY=$SANCUS_SECURITY SANCUS_KEY=$SANCUS_KEY
 
